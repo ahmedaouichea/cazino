@@ -1,0 +1,23 @@
+<mat-toolbar class="toolbarItems">
+  <ul class="flex flex-row justify-between h-full w-full">
+    <li *ngFor="let cat of categories" class="w-full h-full" [ngClass]="cat === activeCategory ? 'active' : ''  ">
+      <div class="flex flex-row justify-center items-center cursor-pointer h-full w-full" (click)="updateList(cat)">
+        <span class="w-full text-center text-white ">  {{ cat | titlecase }}</span>
+      </div>
+
+    </li>
+  </ul>
+</mat-toolbar>
+
+<div class="w-full justify-center align-center content">
+  <div class="m-auto w-4/5">
+    <div class="flex flex-row flex-wrap mt-5 justify-center align-center">
+      <div class="flex flex-row mx-2 my-5 imageDiv" *ngFor="let jackpot of filtredJackpots">
+        <img src="https:{{ jackpot['image'] }}" alt="" class="w-full h-full rounded-lg"/>
+        <div class="iconOverlay">
+          <mat-icon class="icon-display">play_circle_filled</mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

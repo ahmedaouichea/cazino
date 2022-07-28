@@ -1,0 +1,49 @@
+
+$bg-active-color : #8DC63F;
+$bg-header-color : #373737;
+$bg-white-color : #FFFFFF;
+$bg-background-color : #FCFCFC;
+
+
+.toolbarItems{
+  height:80px;
+  margin: auto;
+  display : flex;
+  justify-content: center;
+  align-content: center;
+  background-color: $bg-header-color;
+}
+
+.active{
+  background-color:$bg-active-color ;
+}
+.content{
+  background-color:$bg-background-color ;
+}
+
+.imageDiv{
+  position: relative;
+}
+
+.iconOverlay{
+  position : absolute;
+  top: 0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+@media  (min-width: 705px) {
+  .iconOverlay:hover{
+    opacity:1;
+  }
+}
+
+.icon-display {
+  transform: scale(2);
+}
